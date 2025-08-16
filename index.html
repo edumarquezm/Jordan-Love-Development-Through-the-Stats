@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Love - QB1 Statistics</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tab-button.active {
+            border-bottom-color: #FBBF24;  /* yellow */
+            color: #166534; /* green */
+        }
+        
+
+        .tab-content {
+            display: none;
+        }
+
+            .tab-content.active {
+                display: block;
+            }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header and Title -->
+    <header class="bg-green-800 text-white shadow-lg py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">The Making of a Franchise QB:<br /> Jordan Love’s Development Through the Stats</h1>
+            <p class="mt-2 text-lg text-yellow-300">An In-Depth Look at Jordan Love's Career Trajectory</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Tab Navigation -->
+        <div class="mb-8 border-b border-gray-300">
+            <nav class="flex -mb-px space-x-6" aria-label="Tabs">
+                <button onclick="changeTab('overview')" class="tab-button active whitespace-nowrap py-4 px-1 border-b-4 font-medium text-lg">
+                    Overview
+                </button>
+                <button onclick="changeTab('analysis')" class="tab-button whitespace-nowrap py-4 px-1 border-b-4 border-transparent font-medium text-lg text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    Performance Analysis
+                </button>
+                <button onclick="changeTab('comparison')" class="tab-button whitespace-nowrap py-4 px-1 border-b-4 border-transparent font-medium text-lg text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    Player Comparison
+                </button>
+            </nav>
+        </div>
+
+        <!-- Tab Content Panels -->
+        <div>
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active">
+
+                <!-- Career highlights section -->
+                <section id="career-highlights" class="mb-8">
+                    <h2 class="text-3xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Career Highlights (Regular Season + Playoffs)</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        In his first full season as a starter, Jordan Love established himself as a premier quarterback in the NFL, leading the Packers to a playoff berth with a remarkable performance down the stretch.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="stat-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+                            <p class="text-sm font-semibold text-gray-500 uppercase">Passing Yards</p>
+                            <p class="text-4xl font-bold text-green-800">8,832</p>
+                        </div>
+                        <div class="stat-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+                            <p class="text-sm font-semibold text-gray-500 uppercase">Passing TDs</p>
+                            <p class="text-4xl font-bold text-green-800">65</p>
+                        </div>
+                        <div class="stat-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+                            <p class="text-sm font-semibold text-gray-500 uppercase">Passer Rating</p>
+                            <p class="text-4xl font-bold text-green-800">95.1</p>
+                        </div>
+                        <div class="stat-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+                            <p class="text-sm font-semibold text-gray-500 uppercase">Completion %</p>
+                            <p class="text-4xl font-bold text-green-800">63.5</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Couple graphs -->
+                <section id="graphs" class="mb-8">
+                    <h2 class="text-3xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Visualizations</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">Touchdown Classification</h3>
+                            <img src="https://github.com/edumarquezm/Jordan-Love-Development-Through-the-Stats/blob/main/JordanLoveAll70TDs.png?raw=true" alt="Pie chart showing passing and rushing tds" class="rounded-lg w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Image+Not+Found';">
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">Combined TDs since becoming a starter</h3>
+                            <img src="https://github.com/edumarquezm/Jordan-Love-Development-Through-the-Stats/blob/main/JordanLoveCombinedTDs.png?raw=true" alt="Chart showing combined TDs since 2023" class="rounded-lg w-full h-auto" style="height: 400px;" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Image+Not+Found';">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Career Statistics Table -->
+                <section id="career-stats">
+                    <h2 class="text-3xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Career Statistics (Regular Season)</h2>
+                    <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="p-4 font-semibold">Year</th>
+                                    <th class="p-4 font-semibold">GP</th>
+                                    <th class="p-4 font-semibold">Cmp</th>
+                                    <th class="p-4 font-semibold">Att</th>
+                                    <th class="p-4 font-semibold">Yds</th>
+                                    <th class="p-4 font-semibold">Cmp%</th>
+                                    <th class="p-4 font-semibold">TD</th>
+                                    <th class="p-4 font-semibold">Int</th>
+                                    <th class="p-4 font-semibold">LNG</th>
+                                    <th class="p-4 font-semibold">RTG</th>
+                                    <th class="p-4 font-semibold">QBR</th>
+                                    <th class="p-4 font-semibold">RushYds</th>
+                                    <th class="p-4 font-semibold">RUSHTD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr class="border-b">
+                                    <td class="p-4 font-semibold">2021</td>
+                                    <td class="p-4 font-semibold">6</td>
+                                    <td class="p-4 font-semibold">36</td>
+                                    <td class="p-4 font-semibold">62</td>
+                                    <td class="p-4 font-semibold">411</td>
+                                    <td class="p-4 font-semibold">58.1</td>
+                                    <td class="p-4 font-semibold">2</td>
+                                    <td class="p-4 font-semibold">3</td>
+                                    <td class="p-4 font-semibold">62</td>
+                                    <td class="p-4 font-semibold">68.7</td>
+                                    <td class="p-4 font-semibold">36.8</td>
+                                    <td class="p-4 font-semibold">27</td>
+                                    <td class="p-4 font-semibold">0</td>
+                                </tr>
+
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-semibold">2022</td>
+                                    <td class="p-4 font-semibold">4</td>
+                                    <td class="p-4 font-semibold">14</td>
+                                    <td class="p-4 font-semibold">21</td>
+                                    <td class="p-4 font-semibold">195</td>
+                                    <td class="p-4 font-semibold">66.7</td>
+                                    <td class="p-4 font-semibold">1</td>
+                                    <td class="p-4 font-semibold">0</td>
+                                    <td class="p-4 font-semibold">63</td>
+                                    <td class="p-4 font-semibold">112.2</td>
+                                    <td class="p-4 font-semibold">83.2</td>
+                                    <td class="p-4 font-semibold">0</td>
+                                    <td class="p-4 font-semibold">0</td>
+                                </tr>
+
+                                <tr class="border-b">
+                                    <td class="p-4 font-semibold">2023</td>
+                                    <td class="p-4 font-semibold">17</td>
+                                    <td class="p-4 font-semibold">372</td>
+                                    <td class="p-4 font-semibold">579</td>
+                                    <td class="p-4 font-semibold">4,159</td>
+                                    <td class="p-4 font-semibold">64.2</td>
+                                    <td class="p-4 font-semibold">32</td>
+                                    <td class="p-4 font-semibold">11</td>
+                                    <td class="p-4 font-semibold">77</td>
+                                    <td class="p-4 font-semibold">96.1</td>
+                                    <td class="p-4 font-semibold">62.9</td>
+                                    <td class="p-4 font-semibold">247</td>
+                                    <td class="p-4 font-semibold">4</td>
+                                </tr>
+
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-semibold">2024</td>
+                                    <td class="p-4 font-semibold">15</td>
+                                    <td class="p-4 font-semibold">268</td>
+                                    <td class="p-4 font-semibold">425</td>
+                                    <td class="p-4 font-semibold">3,389</td>
+                                    <td class="p-4 font-semibold">63.1</td>
+                                    <td class="p-4 font-semibold">25</td>
+                                    <td class="p-4 font-semibold">11</td>
+                                    <td class="p-4 font-semibold">70</td>
+                                    <td class="p-4 font-semibold">96.7</td>
+                                    <td class="p-4 font-semibold">69.3</td>
+                                    <td class="p-4 font-semibold">83</td>
+                                    <td class="p-4 font-semibold">1</td>
+                                </tr>
+
+
+                            </tbody>
+                            <tfoot class="bg-green-800 text-white font-bold">
+                                <tr><td class="p-4">Career Total</td><td class="p-4">42</td><td class="p-4">690</td><td class="p-4">1,087</td><td class="p-4">8,154</td><td class="p-4">63.5</td><td class="p-4">60</td><td class="p-4">25</td><td class="p-4">77</td><td class="p-4">95.1</td><td class="p-4">63.1</td><td class="p-4">357</td><td class="p-4">5</td></tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Performance Analysis -->
+            <div id="analysis" class="tab-content">
+                <section>
+                    <h2 class="text-3xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">In-Depth Performance Analysis</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md space-y-4 text-gray-700">
+                        <h3 class="text-2xl font-semibold text-green-800">Career Progress</h3>
+                        <p>
+                            Jordan Love began his NFL career as a back-up for MVP quarterback Aaron Rodgers, where he saw very limited gametime in the 2021 and 2022 season. After Rodgers departure in 2023, Love became the starting quarterback for the Green Bay Packers, and after a few weeks in the position, he showed remarkable athleticism and intelligence on the field, which established him as one of the best quarterbacks in the NFL.<br /><br />
+
+                            Passing is the most important aspect of a QB, and Love has showed his great passing skills over the years. The following graph shows his passing yards per game since becoming a starter in the 2023 season:<br /><br />
+
+                            <img src="https://raw.githubusercontent.com/edumarquezm/Jordan-Love-Development-Through-the-Stats/refs/heads/main/JordanLovePassingYardsPerGame.png" alt="Passing TDs per game" class="rounded-lg w-full h-auto block mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/800x300/e2e8f0/4a5568?text=Image+Not+Found';">
+
+                            <br />In the 2023 NFL regular season, Jordan Love threw for 4,159 yards, with 466 more yards in the playoffs, for a grand total of 4,625 passing yards in the whole season, which is very impressive for a QB on his first year as a starter.
+
+                            <h2 class="text-xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Jordan Love 2023 Stats (Regular Season + Playoffs)</h2>
+                            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="p-4 font-semibold">Cmp</th>
+                                            <th class="p-4 font-semibold">Att</th>
+                                            <th class="p-4 font-semibold">Yds</th>
+                                            <th class="p-4 font-semibold">Cmp%</th>
+                                            <th class="p-4 font-semibold">TD</th>
+                                            <th class="p-4 font-semibold">Int</th>
+                                            <th class="p-4 font-semibold">LNG</th>
+                                            <th class="p-4 font-semibold">RTG</th>
+                                            <th class="p-4 font-semibold">QBR</th>
+                                            <th class="p-4 font-semibold">RushYds</th>
+                                            <th class="p-4 font-semibold">RUSHTD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b"><td class="p-4">409</td><td class="p-4">634</td><td class="p-4">4,159</td><td class="p-4">64.5</td><td class="p-4">37</td><td class="p-4">13</td><td class="p-4">77</td><td class="p-4">96.1</td><td class="p-4">62.9</td><td class="p-4">249</td><td class="p-4">4</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <br /><br />Love's best game in the 2023 season happened in the Wild Card round, where he led the packers to a spectacular 48-32 win against the Dallas Cowboys.<br />
+
+                            <h2 class="text-xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Jordan Love vs Cowboys (Wild Card Game)</h2>
+                            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="p-4 font-semibold">Date</th>
+                                            <th class="p-4 font-semibold">Result</th>
+                                            <th class="p-4 font-semibold">Cmp</th>
+                                            <th class="p-4 font-semibold">Att</th>
+                                            <th class="p-4 font-semibold">Yds</th>
+                                            <th class="p-4 font-semibold">Cmp%</th>
+                                            <th class="p-4 font-semibold">TD</th>
+                                            <th class="p-4 font-semibold">Int</th>
+                                            <th class="p-4 font-semibold">LNG</th>
+                                            <th class="p-4 font-semibold">RTG</th>
+                                            <th class="p-4 font-semibold">QBR</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b"><td class="p-4">1/14/2024</td><td class="p-4">48-32 (W)</td><td class="p-4">16</td><td class="p-4">21</td><td class="p-4">272</td><td class="p-4">76.2</td><td class="p-4">3</td><td class="p-4">0</td><td class="p-4">46</td><td class="p-4">157.2</td><td class="p-4">99.3</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <br />Jordan Love and the Packers would end up losing in the Divisional Round against the San Francisco 49ers, but showing the country that the Packers have a new undisputed QB1, as well as an elite QB in the NFL.<br /><br />
+
+                            In the 2024 NFL regular season, Love got injured at the end of the week 1 game against the Philadelphia Eagles, which made him miss week 2 and week 3 games. In week 4 he came back as a starter against the Minnesota Vikings, where he threw a <b>career-high 389 yards</b>. After a lot of ups-and-downs, Love would end up playing 15 games of the regular season, throwing for 3,389 yards and 25 TDs, unfortunately losing to the Philadelphia Eagles in the Wild Card round.<br /><br />
+
+                            <h2 class="text-xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Jordan Love 2024 Stats (Regular Season + Playoffs)</h2>
+                            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="p-4 font-semibold">Cmp</th>
+                                            <th class="p-4 font-semibold">Att</th>
+                                            <th class="p-4 font-semibold">Yds</th>
+                                            <th class="p-4 font-semibold">Cmp%</th>
+                                            <th class="p-4 font-semibold">TD</th>
+                                            <th class="p-4 font-semibold">Int</th>
+                                            <th class="p-4 font-semibold">LNG</th>
+                                            <th class="p-4 font-semibold">RTG</th>
+                                            <th class="p-4 font-semibold">QBR</th>
+                                            <th class="p-4 font-semibold">RushYds</th>
+                                            <th class="p-4 font-semibold">RUSHTD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b"><td class="p-4">288</td><td class="p-4">458</td><td class="p-4">3,601</td><td class="p-4">62.9</td><td class="p-4">25</td><td class="p-4">14</td><td class="p-4">70</td><td class="p-4">96.7</td><td class="p-4">69.3</td><td class="p-4">93</td><td class="p-4">1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <br /><br /> Love's best game in the 2024 season occured on Thanksgiving Day, where he threw for 274 yards and 2 TDs in a 30-17 win against the Miami Dolphins.<br />
+
+                            <h2 class="text-xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Jordan Love vs Dolphins (Week 13)</h2>
+                            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="p-4 font-semibold">Date</th>
+                                            <th class="p-4 font-semibold">Result</th>
+                                            <th class="p-4 font-semibold">Cmp</th>
+                                            <th class="p-4 font-semibold">Att</th>
+                                            <th class="p-4 font-semibold">Yds</th>
+                                            <th class="p-4 font-semibold">Cmp%</th>
+                                            <th class="p-4 font-semibold">TD</th>
+                                            <th class="p-4 font-semibold">Int</th>
+                                            <th class="p-4 font-semibold">LNG</th>
+                                            <th class="p-4 font-semibold">RTG</th>
+                                            <th class="p-4 font-semibold">QBR</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b"><td class="p-4">11/28/2024</td><td class="p-4">30-17 (W)</td><td class="p-4">21</td><td class="p-4">28</td><td class="p-4">274</td><td class="p-4">75.0</td><td class="p-4">2</td><td class="p-4">0</td><td class="p-4">49</td><td class="p-4">129.2</td><td class="p-4">85.6</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <br /><br /> After analyzing Love's stats for both seasons, we can see that he increased his numbers in some categories, while he decreased his numbers in others: <br /><br />
+
+                            <h2 class="text-xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Jordan Love 2023 vs 2024 Season Stats</h2>
+                            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="p-4 font-semibold">Year</th>
+                                            <th class="p-4 font-semibold">Cmp</th>
+                                            <th class="p-4 font-semibold">Att</th>
+                                            <th class="p-4 font-semibold">Yds</th>
+                                            <th class="p-4 font-semibold">Cmp%</th>
+                                            <th class="p-4 font-semibold">TD</th>
+                                            <th class="p-4 font-semibold">Int</th>
+                                            <th class="p-4 font-semibold">LNG</th>
+                                            <th class="p-4 font-semibold">RTG</th>
+                                            <th class="p-4 font-semibold">QBR</th>
+                                            <th class="p-4 font-semibold">RushYds</th>
+                                            <th class="p-4 font-semibold">RUSHTD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b"><td class="p-4">2023</td><td class="p-4">409</td><td class="p-4">634</td><td class="p-4">4,159</td><td class="p-4">64.5</td><td class="p-4">37</td><td class="p-4">13</td><td class="p-4">77</td><td class="p-4">96.1</td><td class="p-4">62.9</td><td class="p-4">249</td><td class="p-4">4</td></tr>
+                                        <tr class="border-b"><td class="p-4">2024</td><td class="p-4">288</td><td class="p-4">458</td><td class="p-4">3,601</td><td class="p-4">62.9</td><td class="p-4">25</td><td class="p-4">14</td><td class="p-4">70</td><td class="p-4">96.7</td><td class="p-4">69.3</td><td class="p-4">93</td><td class="p-4">1</td></tr>
+                                    </tbody>
+                                    <tfoot class="bg-green-800 text-white font-bold">
+                                        <tr><td class="p-4">+/-</td><td class="p-4">-29.6%</td><td class="p-4">-27.8%</td><td class="p-4">-13.4%</td><td class="p-4">-2.5%</td><td class="p-4">-32.4%</td><td class="p-4">+7.7%</td><td class="p-4">-9.1%</td><td class="p-4">0.6%</td><td class="p-4">+10.2%</td><td class="p-4">-62.7%</td><td class="p-4">-75.0%</td></tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <br /><br /> It is important to note that Love played 2 games less in 2024 due to injury, but it is slightly concerning to see so many stats decreasing, which raises an important question: what happened?<br /><br />
+
+                            Even though Love did not play as well as he did in 2023, the Packers started <i>running</i> a different offense in 2024, more specifically a more run-heavy offense thanks to their new signing: <b>RB Josh Jacobs.</b> <br /><br />
+
+                            In the 2023 regular season, the Packers used a combination of <b>RB Aaron Jones and RB AJ Dillon</b> for their run game, getting a total of 1,269 rushing yards on 320 carries between the two. In comparison, on the 2024 regular season, Josh Jacobs <b>alone</b> ran for 1,329 yards on 301 carries, which could explain part of why Love had less passing attempts. <br />
+                            <i>* Honorable mention to RB Emanuel Wilson, who got 502 rushing yards on 103 carries while being Jacobs' backup.</i><br /><br />
+
+                            This can also explain why Love had such a dramatic decrease in rushing yards (-62.7%) and rushing TDs (-75%), in other words, there was simply no reason for Love to run the ball when Jacobs and Wilson were getting such good carries. The following graph shows his rushing stats per game:<br /><br />
+
+                            <img src="https://github.com/edumarquezm/Jordan-Love-Development-Through-the-Stats/blob/main/JordanLoveRushingYardsPerGame.png?raw=true" alt="Passing TDs per game" class="rounded-lg w-full h-auto block mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/800x300/e2e8f0/4a5568?text=Image+Not+Found';">
+
+                            <br /><br />Another significant decrease to mention: Touchdowns. In the 2023 regular season, Aaron Jones and AJ Dillon combined for a total of 5 TDs (Rec + Rush), with Jordan Love commanding the Packers with 36 TDs (Pass + Rush). In the 2024 regular season, Josh Jacobs accumulated 16 TDs (Rec + Rush), which is <b>triple the amount from what the 2023 RB duo got (220% increase)</b>, but Jordan Love would still command the Packers with 26 TDs (Pass + Rush), a 27.8% decrease from the past season.<br /><br />
+
+                            Aside from Love, most of the Packers' offense saw a decrease in TDs, including <b>WR Romeo Doubs, WR Christian Watson, WR Jayden Reed and WR Bo Melton.</b> On the other hand, <b>TE Tucker Kraft</b> was the only receiver who saw a significant raise in TDs (2 -> 7), further proving the point that most of the Packers' TDs are being diverted to Jacobs.<br /><br />
+
+                        </p>
+
+
+                        <h3 class="text-2xl font-semibold text-green-800">Predictions for 2025</h3>
+
+                        <p>
+                            Stats in the NFL are very unpredictable because there are too many factors that can affect how a player performs (tactics, injuries, schedule, coaching, etc.), but in pure mathematical terms, Jordan Love should get the following stats in the 2025 regular season, assuming he plays all 17 games:
+
+                            <h2 class="text-xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Jordan Love 2025 Regular Season Stats Prediction (using trend-based regression)</h2>
+                            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="p-4 font-semibold">Cmp</th>
+                                            <th class="p-4 font-semibold">Att</th>
+                                            <th class="p-4 font-semibold">Yds</th>
+                                            <th class="p-4 font-semibold">Cmp%</th>
+                                            <th class="p-4 font-semibold">TD</th>
+                                            <th class="p-4 font-semibold">Int</th>
+                                            <th class="p-4 font-semibold">LNG</th>
+                                            <th class="p-4 font-semibold">RTG</th>
+                                            <th class="p-4 font-semibold">QBR</th>
+                                            <th class="p-4 font-semibold">RushYds</th>
+                                            <th class="p-4 font-semibold">RUSHTD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b"><td class="p-4">235</td><td class="p-4">384</td><td class="p-4">3,523</td><td class="p-4">62.0</td><td class="p-4">25</td><td class="p-4">14</td><td class="p-4">63</td><td class="p-4">97.3</td><td class="p-4">75.7</td><td class="p-4">32</td><td class="p-4">1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </p>
+
+                     </div>
+                </section>
+            </div>
+
+            <!-- Player Comparison Tab (Jordan Love vs other NFC North QBs) -->
+            <div id="comparison" class="tab-content">
+                <section>
+                    <h2 class="text-3xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6">Jordan Love vs other NFC North QBs: 2023 Regular Season</h2>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="p-4 font-semibold">Name</th>
+                                    <th class="p-4 font-semibold">GP</th>
+                                    <th class="p-4 font-semibold">Cmp</th>
+                                    <th class="p-4 font-semibold">Att</th>
+                                    <th class="p-4 font-semibold">Yds</th>
+                                    <th class="p-4 font-semibold">Cmp%</th>
+                                    <th class="p-4 font-semibold">TD</th>
+                                    <th class="p-4 font-semibold">Int</th>
+                                    <th class="p-4 font-semibold">LNG</th>
+                                    <th class="p-4 font-semibold">RTG</th>
+                                    <th class="p-4 font-semibold">QBR</th>
+                                    <th class="p-4 font-semibold">RushYds</th>
+                                    <th class="p-4 font-semibold">RUSHTD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b bg-green-50">
+                                    <td class="p-4 font-semibold">Jordan Love</td>
+                                    <td class="p-4 font-semibold">17</td>
+                                    <td class="p-4 font-semibold">372</td>
+                                    <td class="p-4 font-semibold">579</td>
+                                    <td class="p-4 font-semibold">4,159</td>
+                                    <td class="p-4 font-semibold">64.2</td>
+                                    <td class="p-4 font-semibold">32</td>
+                                    <td class="p-4 font-semibold">11</td>
+                                    <td class="p-4 font-semibold">77</td>
+                                    <td class="p-4 font-semibold">96.1</td>
+                                    <td class="p-4 font-semibold">62.9</td>
+                                    <td class="p-4 font-semibold">247</td>
+                                    <td class="p-4 font-semibold">4</td>
+                                </tr>
+                                <tr class="border-b bg-blue-50">
+                                    <td class="p-4 font-semibold">Jared Goff</td>
+                                    <td class="p-4 font-semibold">17</td>
+                                    <td class="p-4 font-semibold">407</td>
+                                    <td class="p-4 font-semibold">605</td>
+                                    <td class="p-4 font-semibold">4,575</td>
+                                    <td class="p-4 font-semibold">67.3</td>
+                                    <td class="p-4 font-semibold">30</td>
+                                    <td class="p-4 font-semibold">12</td>
+                                    <td class="p-4 font-semibold">70</td>
+                                    <td class="p-4 font-semibold">97.9</td>
+                                    <td class="p-4 font-semibold">61.1</td>
+                                    <td class="p-4 font-semibold">21</td>
+                                    <td class="p-4 font-semibold">2</td>
+                                </tr>
+                                <tr class="border-b bg-orange-50">
+                                    <td class="p-4 font-semibold">Justin Fields</td>
+                                    <td class="p-4 font-semibold">13</td>
+                                    <td class="p-4 font-semibold">227</td>
+                                    <td class="p-4 font-semibold">370</td>
+                                    <td class="p-4 font-semibold">2,562</td>
+                                    <td class="p-4 font-semibold">61.4</td>
+                                    <td class="p-4 font-semibold">16</td>
+                                    <td class="p-4 font-semibold">9</td>
+                                    <td class="p-4 font-semibold">58</td>
+                                    <td class="p-4 font-semibold">86.3</td>
+                                    <td class="p-4 font-semibold">46.9</td>
+                                    <td class="p-4 font-semibold">657</td>
+                                    <td class="p-4 font-semibold">4</td>
+                                </tr>
+                                <tr class="border-b bg-purple-50">
+                                    <td class="p-4 font-semibold">Kirk Cousins</td>
+                                    <td class="p-4 font-semibold">8</td>
+                                    <td class="p-4 font-semibold">216</td>
+                                    <td class="p-4 font-semibold">311</td>
+                                    <td class="p-4 font-semibold">2,331</td>
+                                    <td class="p-4 font-semibold">69.5</td>
+                                    <td class="p-4 font-semibold">18</td>
+                                    <td class="p-4 font-semibold">5</td>
+                                    <td class="p-4 font-semibold">62</td>
+                                    <td class="p-4 font-semibold">103.8</td>
+                                    <td class="p-4 font-semibold">64.0</td>
+                                    <td class="p-4 font-semibold">25</td>
+                                    <td class="p-4 font-semibold">0</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-bold text-green-900 border-b-4 border-yellow-400 pb-2 mb-6"><br /><br />Jordan Love vs other NFC North QBs: 2024 Regular Season</h2>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="p-4 font-semibold">Name</th>
+                                    <th class="p-4 font-semibold">GP</th>
+                                    <th class="p-4 font-semibold">Cmp</th>
+                                    <th class="p-4 font-semibold">Att</th>
+                                    <th class="p-4 font-semibold">Yds</th>
+                                    <th class="p-4 font-semibold">Cmp%</th>
+                                    <th class="p-4 font-semibold">TD</th>
+                                    <th class="p-4 font-semibold">Int</th>
+                                    <th class="p-4 font-semibold">LNG</th>
+                                    <th class="p-4 font-semibold">RTG</th>
+                                    <th class="p-4 font-semibold">QBR</th>
+                                    <th class="p-4 font-semibold">RushYds</th>
+                                    <th class="p-4 font-semibold">RUSHTD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b bg-green-50">
+                                    <td class="p-4 font-semibold">Jordan Love</td>
+                                    <td class="p-4 font-semibold">15</td>
+                                    <td class="p-4 font-semibold">268</td>
+                                    <td class="p-4 font-semibold">425</td>
+                                    <td class="p-4 font-semibold">3,389</td>
+                                    <td class="p-4 font-semibold">63.1</td>
+                                    <td class="p-4 font-semibold">25</td>
+                                    <td class="p-4 font-semibold">11</td>
+                                    <td class="p-4 font-semibold">70</td>
+                                    <td class="p-4 font-semibold">96.7</td>
+                                    <td class="p-4 font-semibold">69.3</td>
+                                    <td class="p-4 font-semibold">83</td>
+                                    <td class="p-4 font-semibold">1</td>
+                                </tr>
+                                <tr class="border-b bg-blue-50">
+                                    <td class="p-4 font-semibold">Jared Goff</td>
+                                    <td class="p-4 font-semibold">17</td>
+                                    <td class="p-4 font-semibold">390</td>
+                                    <td class="p-4 font-semibold">539</td>
+                                    <td class="p-4 font-semibold">4,629</td>
+                                    <td class="p-4 font-semibold">72.4</td>
+                                    <td class="p-4 font-semibold">37</td>
+                                    <td class="p-4 font-semibold">12</td>
+                                    <td class="p-4 font-semibold">82</td>
+                                    <td class="p-4 font-semibold">111.8</td>
+                                    <td class="p-4 font-semibold">68.4</td>
+                                    <td class="p-4 font-semibold">56</td>
+                                    <td class="p-4 font-semibold">0</td>
+                                </tr>
+                                <tr class="border-b bg-orange-50">
+                                    <td class="p-4 font-semibold">Caleb Williams</td>
+                                    <td class="p-4 font-semibold">17</td>
+                                    <td class="p-4 font-semibold">351</td>
+                                    <td class="p-4 font-semibold">562</td>
+                                    <td class="p-4 font-semibold">3,541</td>
+                                    <td class="p-4 font-semibold">62.5</td>
+                                    <td class="p-4 font-semibold">20</td>
+                                    <td class="p-4 font-semibold">6</td>
+                                    <td class="p-4 font-semibold">47</td>
+                                    <td class="p-4 font-semibold">87.8</td>
+                                    <td class="p-4 font-semibold">46.7</td>
+                                    <td class="p-4 font-semibold">489</td>
+                                    <td class="p-4 font-semibold">0</td>
+                                </tr>
+                                <tr class="border-b bg-purple-50">
+                                    <td class="p-4 font-semibold">Sam Darnold</td>
+                                    <td class="p-4 font-semibold">17</td>
+                                    <td class="p-4 font-semibold">361</td>
+                                    <td class="p-4 font-semibold">545</td>
+                                    <td class="p-4 font-semibold">4,319</td>
+                                    <td class="p-4 font-semibold">66.2</td>
+                                    <td class="p-4 font-semibold">35</td>
+                                    <td class="p-4 font-semibold">12</td>
+                                    <td class="p-4 font-semibold">97</td>
+                                    <td class="p-4 font-semibold">102.5</td>
+                                    <td class="p-4 font-semibold">60.4</td>
+                                    <td class="p-4 font-semibold">212</td>
+                                    <td class="p-4 font-semibold">1</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer with credits -->
+    <footer class="bg-green-900 text-white mt-8 py-6">
+        <div class="container mx-auto text-center">
+            <p>Website created by Eduardo Marquez</p>
+            <p class="text-sm text-gray-400">Data sourced from official NFL statistics.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching
+        function changeTab(tabId) {
+
+            // Get all tab buttons and content panels
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // Remove 'active' class from all buttons and content
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked button and corresponding content
+            const button = document.querySelector(`button[onclick="changeTab('${tabId}')"]`);
+            const content = document.getElementById(tabId);
+
+            button.classList.add('active');
+            content.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
